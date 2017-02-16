@@ -14,11 +14,12 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        txtfaq=(TextView)findViewById(R.id.txtfaq);
+        txtfaq = (TextView) findViewById(R.id.txtfaq);
 
         Bundle b;
         b = getIntent().getExtras();
         String conteudo = b.getString("");
         txtfaq.setText(conteudo);
+
     }
 }

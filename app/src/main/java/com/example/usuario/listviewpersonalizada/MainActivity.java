@@ -7,23 +7,43 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Switch;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    //Adicionar Resposta conforme setOnItemClickListener
+    private void adicionarResposta(int num){
 
-    private void enviarActivity(int num){
-
-        if(num == 1){
-
+        if(num == 1) {
             Intent intent = new Intent(this, Main2Activity.class);
-            String conteudo = "Conteudo da pergunta";
+            String conteudo = "Conteudo da pergunta 1";
+            intent.putExtra("", conteudo);
+            startActivity(intent);
+
+        }else if (num == 2){
+            Intent intent = new Intent(this, Main2Activity.class);
+            String conteudo = "Conteudo da pergunta 2";
+            intent.putExtra("", conteudo);
+            startActivity(intent);
+
+        }else if (num == 3){
+            Intent intent = new Intent(this, Main2Activity.class);
+            String conteudo = "Conteudo da pergunta 3";
+            intent.putExtra("", conteudo);
+            startActivity(intent);
+
+        }else if (num == 4){
+            Intent intent = new Intent(this, Main2Activity.class);
+            String conteudo = "Conteudo da pergunta 4";
+            intent.putExtra("", conteudo);
+            startActivity(intent);
+
+        }else if (num == 5){
+            Intent intent = new Intent(this, Main2Activity.class);
+            String conteudo = "Conteudo da pergunta 5";
             intent.putExtra("", conteudo);
             startActivity(intent);
         }
     }
-
     private ListView listViewPersonalizada;
 
     @Override
@@ -32,33 +52,35 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listViewPersonalizada = (ListView) findViewById(R.id.listViewPersonalizada);
-        ArrayList<AtributosDaLista> perguntas = adicionarPerguntas();
+
+        final ArrayList<AtributosDaLista> perguntas = adicionarPerguntas();
         ArrayAdapter adapter = new AtributosAdapter(this, perguntas);
         listViewPersonalizada.setAdapter(adapter);
+        //Clique da lista
         listViewPersonalizada.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent;
                 switch (i){
                     case 0:
-                        enviarActivity(1);
+                        adicionarResposta(1);
                         break;
                     case 1:
-                        enviarActivity(2);
+                        adicionarResposta(2);
                         break;
                     case 2:
-                        enviarActivity(3);
+                        adicionarResposta(3);
                         break;
                     case 3:
-                        enviarActivity(4);
+                        adicionarResposta(4);
                         break;
                     case 4:
-                        enviarActivity(5);
+                        adicionarResposta(5);
                         break;
                 }
             }
         });
     }
+    //Adicionar Perguntas
     private ArrayList<AtributosDaLista> adicionarPerguntas() {
 
         ArrayList<AtributosDaLista> perguntas = new ArrayList<AtributosDaLista>();
@@ -66,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         e = new AtributosDaLista("Por que essa pergunta esta aqui, nao faz sentido.");
         perguntas.add(e);
-        e = new AtributosDaLista("Por que essa pergunta esta aqui, nao faz sentido.");
+        e = new AtributosDaLista("Por que essa pergunta esta aqui, faz sentido.");
         perguntas.add(e);
         e = new AtributosDaLista("Por que essa pergunta esta aqui, nao faz sentido.");
         perguntas.add(e);
