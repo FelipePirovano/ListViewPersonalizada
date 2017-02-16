@@ -13,6 +13,17 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private void enviarActivity(int num){
+
+        if(num == 1){
+
+            Intent intent = new Intent(this, Main2Activity.class);
+            String conteudo = "Conteudo da pergunta";
+            intent.putExtra("", conteudo);
+            startActivity(intent);
+        }
+    }
+
     private ListView listViewPersonalizada;
 
     @Override
@@ -30,19 +41,19 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent;
                 switch (i){
                     case 0:
-                        System.out.println("------------------> 1 ");
+                        enviarActivity(1);
                         break;
                     case 1:
-                        System.out.println("------------------> 2 ");
+                        enviarActivity(2);
                         break;
                     case 2:
-                        System.out.println("------------------> 3 ");
+                        enviarActivity(3);
                         break;
                     case 3:
-                        System.out.println("------------------> 4 ");
+                        enviarActivity(4);
                         break;
                     case 4:
-                        System.out.println("------------------> 5 ");
+                        enviarActivity(5);
                         break;
                 }
             }
