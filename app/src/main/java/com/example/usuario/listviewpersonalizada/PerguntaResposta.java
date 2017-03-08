@@ -1,9 +1,15 @@
 package com.example.usuario.listviewpersonalizada;
 
-public class AtributosDaLista {
+public class PerguntaResposta {
 
     private String pergunta;
     private String resposta;
+
+    public PerguntaResposta(String pergunta, String resposta) {
+        this.pergunta = pergunta;
+        this.resposta = resposta;
+
+    }
 
     public String getPergunta() {
         return pergunta;
@@ -20,10 +26,5 @@ public class AtributosDaLista {
         this.resposta = resposta;
     }
 
-    public AtributosDaLista(String pergunta, String resposta) {
-        this.pergunta = pergunta;
-        this.resposta = resposta;
-
-    }
 }
 
