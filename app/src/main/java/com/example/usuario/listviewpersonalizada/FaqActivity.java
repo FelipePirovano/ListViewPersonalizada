@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class FaqActivity extends AppCompatActivity{
 
     private ListView listViewPersonalizada;
-    private ArrayList<PerguntaResposta> perguntas;
+    private ArrayList<PerguntaResposta> perguntas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
