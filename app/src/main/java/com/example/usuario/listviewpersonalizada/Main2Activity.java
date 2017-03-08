@@ -7,19 +7,23 @@ import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
 
-    private TextView txtfaq;
+    private TextView txtfaq1;
+    private TextView txtfaq2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        txtfaq = (TextView) findViewById(R.id.txtfaq);
+        txtfaq1 = (TextView) findViewById(R.id.txtfaq1);
+        txtfaq2 = (TextView) findViewById(R.id.txtfaq2);
 
-        Bundle b;
-        b = getIntent().getExtras();
-        String conteudo = b.getString("");
-        txtfaq.setText(conteudo);
+        Intent intent = getIntent();
+        String paramentro = (String)intent.getSerializableExtra("dados");
+        String paramentro2 = (String)intent.getSerializableExtra("dados2");
+
+        txtfaq1.setText(paramentro);
+        txtfaq2.setText(paramentro2);
 
     }
 }

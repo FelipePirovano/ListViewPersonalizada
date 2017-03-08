@@ -12,8 +12,15 @@
     tools:context="com.example.usuario.listviewpersonalizada.Main2Activity">
 
     <TextView
+        android:id="@+id/txtfaq1"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/txtfaq"/>
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtfaq2"
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
