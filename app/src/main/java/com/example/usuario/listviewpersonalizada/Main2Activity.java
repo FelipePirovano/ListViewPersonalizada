@@ -24,6 +24,5 @@ public class Main2Activity extends AppCompatActivity {
 
         txtfaq1.setText(paramentro);
         txtfaq2.setText(paramentro2);
-
     }
 }

@@ -6,11 +6,8 @@ public class AtributosDaLista {
     private String resposta;
 
     public String getPergunta() {
-
-
         return pergunta;
     }
-
     public void setPergunta(String pergunta) {
         this.pergunta = pergunta;
     }
